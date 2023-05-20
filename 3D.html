@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D CARD DESIGN </title>
+    <link rel="stylesheet" href="3D.css">
+</head> 
+<body>
+    <div class="container">
+        <div class="product">
+
+            <img src="images/1.jpg" id="frontimg">
+            <img src="images/3.jpg" id="backimg">
+
+            <div class="product-inner" id="productbox">
+                <div class="product-front">
+                    <div class="product-top">
+                        <h1>Nike</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>Nike Running Shoes</p>
+                        <h2>Air Zoom Winflo 6</h2>
+                        <h1>125 <span>$</span></h1>
+                        <button type="button">Add To Bag</button>
+                        <div class="color-select">
+                            <div class="select-item">
+                                <img src="images/1.jpg">
+                            </div>
+                            <div class="select-item">
+                                <img src="images/2.jpg" onclick="flipright()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-back">
+                    <div class="product-top product-top2">
+                        <h1>Nike</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <p>Nike Running Shoes</p>
+                        <h2>Air Zoom Winflo 6</h2>
+                        <h1>125 <span>$</span></h1>
+                        <button type="button">Add To Bag</button>
+                        <div class="color-select">
+                            <div class="select-item">
+                                <img src="images/1.jpg" onclick="flipleft()">
+                            </div>
+                            <div class="select-item">
+                                <img src="images/2.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left-side"></div>
+                <div class="right-side"></div>
+            </div>
+        </div> 
+    </div>
+    <div class="hansel">
+        <marquee behavior="flow" direction="left">Welcome And Enjoy Our Free Web Designing Course Just By Signing Up To Our Training Academy And Subscribing To Our Youtube Channel. Have a Previllage To Be Taught With Highly Expirienced Web Designers Who Are Currently Working On Websites Of The Top Organizations Across The World. Animated By Eng. Hansel Ndemange.</marquee>
+    </div>
+    <script>
+        var productbox = document.getElementById("productbox");
+        var frontimg = document.getElementById("frontimg");
+        var backimg = document.getElementById("backimg");
+
+        function flipright(){
+            productbox.style.transform = "rotateY(180deg)"
+            frontimg.style.left = "650px"
+            backimg.style.left = "20px"
+            frontimg.style.transform = "rotate(-30deg)"
+            backimg.style.transform = "rotate(0deg)"
+        }
+        function flipleft(){
+            productbox.style.transform = "rotateY(0deg)"
+            frontimg.style.left = "20px"
+            backimg.style.left = "-650px"
+            frontimg.style.transform = "rotate(0deg)"
+            backimg.style.transform = "rotate(-30deg)"
+        }
+    </script>
+</body>
+</html>
